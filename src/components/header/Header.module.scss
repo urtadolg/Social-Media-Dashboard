@@ -1,0 +1,13 @@
+@import "../../styles";
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: $Mobile-BreakPoint) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../styles";
+
+.card {
+  display: block;
+  width: calc((100% / 4) - 30px);
+  height: fit-content;
+  .topDetail {
+    content: "";
+    position: sticky;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px 5px 0 0;
+  }
+  @media (max-width: $Mobile-BreakPoint) {
+    width: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 220px;
+  border-radius: 0 0 5px 5px;
+  padding: 1rem;
+
+  .socialMediaContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-weight: $weightBold;
+    font-size: 0.9rem;
+  }
+
+  .mainDataContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mainData {
+      font-size: 3.5rem;
+      font-weight: $weightBold;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  .dataVariationContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-weight: $weightBold;
+  }
+}
+
+.containerDark {
+  background-color: $Dark-Desaturated-Blue-Card-BG;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $Dark-Desaturated-Blue-Card-BG + 15;
+    cursor: pointer;
+  }
+
+  .socialMediaContainer {
+    color: $Desaturated-Blue-Text;
+  }
+
+  .mainDataContainer {
+    .mainData {
+      color: $White-Text;
+    }
+
+    .description {
+      color: $Desaturated-Blue-Text;
+    }
+  }
+  .dataVariationContainer {
+    color: $White-Text;
+  }
+}
+
+.containerLight {
+  background-color: $Light-Grayish-Blue-Card-BG;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $Light-Grayish-Blue-Card-BG - 15;
+    cursor: pointer;
+  }
+  .socialMediaContainer {
+    color: $Dark-Grayish-Blue-Text;
+  }
+
+  .mainDataContainer {
+    .mainData {
+      color: $Very-Dark-Blue-Text;
+    }
+
+    .description {
+      color: $Dark-Grayish-Blue-Text;
+    }
+  }
+  .dataVariationContainer {
+    color: $Lime-Green;
+  }
+}

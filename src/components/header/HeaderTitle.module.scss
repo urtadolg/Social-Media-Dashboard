@@ -1,0 +1,37 @@
+@import "../../styles";
+
+.title_desc {
+  @media (max-width: $Mobile-BreakPoint) {
+    width: 100%;
+    padding-bottom: 25px;
+    border-bottom: $Dark-Grayish-Blue-Text 1px solid;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: $Font-size-Overview-Card-Headings;
+    font-weight: $weightBold;
+  }
+}
+
+.title_desc_dark {
+  h1 {
+    color: $White-Text;
+  }
+  p {
+    color: $Desaturated-Blue-Text;
+  }
+}
+
+.title_desc_light {
+  h1 {
+    color: $Very-Dark-Blue-Text;
+  }
+  p {
+    color: $Dark-Grayish-Blue-Text;
+  }
+}

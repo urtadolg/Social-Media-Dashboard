@@ -1,0 +1,14 @@
+@import "../../styles";
+
+.layout {
+  width: 100%;
+  height: 100%;
+}
+
+.layoutDark {
+  background-color: $Very-Dark-Blue-BG;
+}
+
+.layoutLight {
+  background-color: $White-BG;
+}

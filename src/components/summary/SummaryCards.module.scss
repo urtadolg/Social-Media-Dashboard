@@ -1,0 +1,11 @@
+@import "../../styles";
+
+.summaryCards {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $Mobile-BreakPoint) {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

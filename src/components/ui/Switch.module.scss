@@ -1,0 +1,58 @@
+@import "../../styles";
+
+.wrapperSwitch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+
+  @media (max-width: $Mobile-BreakPoint) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .switchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px;
+    width: 60px;
+    height: fit-content;
+    border-radius: 25px;
+    cursor: pointer;
+
+    .selector {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.wrapperSwitchDark {
+  p {
+    color: $Desaturated-Blue-Text;
+  }
+  .switchContainer {
+    justify-content: flex-start;
+    background: hsl(210, 78%, 56%);
+    background: $Toggle-Dark;
+  }
+  .selector {
+    background-color: $Dark-Desaturated-Blue-Card-BG;
+  }
+}
+
+.wrapperSwitchLight {
+  p {
+    color: $Dark-Grayish-Blue-Text;
+  }
+  .switchContainer {
+    justify-content: flex-end;
+    background: none;
+    background-color: $Toggle-Light;
+  }
+  .selector {
+    background-color: $Light-Grayish-Blue-Card-BG;
+  }
+}
