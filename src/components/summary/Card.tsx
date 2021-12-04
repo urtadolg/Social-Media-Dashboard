@@ -1,9 +1,4 @@
-import React, {
-  useContext,
-  Component,
-  ReactComponentElement,
-  CSSProperties,
-} from "react";
+import React, { useContext, CSSProperties } from "react";
 
 import ThemeContext from "../../store/theme-context";
 import styles from "./Card.module.scss";
@@ -15,45 +10,50 @@ import { ReactComponent as ArrowUpLogo } from "../../assets/icon-up.svg";
 import { ReactComponent as ArrowDownLogo } from "../../assets/icon-down.svg";
 
 const Card: React.FC<{
-  socialMedia: "Facebook" | "Instagram" | "Twitter" | "Youtube";
-  socialMediaUserName: string;
-  data: string;
-  dataDescription: string;
-  variation: "up" | "down";
-  variationAmout: string;
+  data: {
+    id: string;
+    socialMedia: "Facebook" | "Instagram" | "Twitter" | "Youtube";
+    username: string;
+    data: string;
+    variation: "up" | "down";
+    variationAmount: string;
+  };
 }> = (props) => {
   const themeCtx = useContext(ThemeContext);
 
   const socialMediaLogo =
-    props.socialMedia === "Facebook" ? (
+    props.data.socialMedia === "Facebook" ? (
       <FacebookLogo />
-    ) : props.socialMedia === "Instagram" ? (
+    ) : props.data.socialMedia === "Instagram" ? (
       <InstagramLogo />
-    ) : props.socialMedia === "Twitter" ? (
+    ) : props.data.socialMedia === "Twitter" ? (
       <TwitterLogo />
-    ) : props.socialMedia === "Youtube" ? (
+    ) : props.data.socialMedia === "Youtube" ? (
       <YoutubeLogo />
     ) : (
       <FacebookLogo />
     );
 
   const socialMediaColor: CSSProperties | undefined =
-    props.socialMedia === "Facebook"
+    props.data.socialMedia === "Facebook"
       ? { backgroundColor: "hsl(208, 92%, 53%)" }
-      : props.socialMedia === "Instagram"
+      : props.data.socialMedia === "Instagram"
       ? {
           background: "hsl(37, 97%, 70%)",
           backgroundImage:
             "linear-gradient(90deg,hsl(37, 97%, 70%) 0%, hsl(329, 70%, 58%) 100%)",
         }
-      : props.socialMedia === "Twitter"
+      : props.data.socialMedia === "Twitter"
       ? { backgroundColor: "hsl(203, 89%, 53%)" }
-      : props.socialMedia === "Youtube"
+      : props.data.socialMedia === "Youtube"
       ? { backgroundColor: "hsl(348, 97%, 39%)" }
       : { backgroundColor: "hsl(208, 92%, 53%)" };
 
   const variationArrowIcon =
-    props.variation === "up" ? <ArrowUpLogo /> : <ArrowDownLogo />;
+    props.data.variation === "up" ? <ArrowUpLogo /> : <ArrowDownLogo />;
+
+  const dataDescription =
+    props.data.socialMedia === "Youtube" ? "SUBSCRIBERS" : "FOLLOWERS";
 
   const containerClasses =
     themeCtx.theme === "Light"
@@ -66,15 +66,15 @@ const Card: React.FC<{
       <div className={containerClasses}>
         <div className={styles.socialMediaContainer}>
           {socialMediaLogo}
-          <span className={styles.socialName}>{props.socialMediaUserName}</span>
+          <span className={styles.socialName}>{props.data.username}</span>
         </div>
         <div className={styles.mainDataContainer}>
-          <span className={styles.mainData}>{props.data}</span>
-          <span className={styles.description}>{props.dataDescription}</span>
+          <span className={styles.mainData}>{props.data.data}</span>
+          <span className={styles.description}>{dataDescription}</span>
         </div>
-        <div className={styles.dataVariationContainer}>
+        <div className={styles.variationAmountContainer}>
           {variationArrowIcon}
-          <span>{`${props.variationAmout} Today`}</span>
+          <span>{`${props.data.variationAmount} Today`}</span>
         </div>
       </div>
     </div>

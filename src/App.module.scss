@@ -1,46 +1,12 @@
 @import "./styles";
 
-.appContainer {
+.container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 1440px;
-  margin: auto;
-  padding: 2rem 0;
-
+  justify-content: space-between;
+  width: $Desktop-Width;
+  height: 100%;
   @media (max-width: $Mobile-BreakPoint) {
-    max-width: $Mobile-Width;
-    gap: 20px;
-  }
-
-  h1,
-  p {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.appContainerDark {
-  .titleContainer {
-    h1 {
-      color: $White-Text;
-    }
-
-    p {
-      color: $Desaturated-Blue-Text;
-    }
-    border-color: $Desaturated-Blue-Text;
-  }
-}
-
-.appContainerLight {
-  .titleContainer {
-    h1 {
-      color: $Very-Dark-Blue-Text;
-    }
-
-    p {
-      color: $Dark-Grayish-Blue-Text;
-    }
+    width: $Mobile-Width;
   }
 }

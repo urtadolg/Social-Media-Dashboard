@@ -2,7 +2,7 @@
 
 .card {
   display: block;
-  width: calc((100% / 4) - 30px);
+  min-width: calc((100% / 4) - 30px);
   height: fit-content;
   .topDetail {
     content: "";
@@ -53,7 +53,7 @@
     }
   }
 
-  .dataVariationContainer {
+  .variationAmountContainer {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -84,7 +84,7 @@
       color: $Desaturated-Blue-Text;
     }
   }
-  .dataVariationContainer {
+  .variationAmountContainer {
     color: $White-Text;
   }
 }

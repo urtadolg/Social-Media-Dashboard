@@ -1,0 +1,35 @@
+@import "../../styles";
+
+.overview {
+  .title {
+    margin-bottom: 30px;
+    @media (max-width: $Mobile-BreakPoint) {
+      margin-top: 50px;
+    }
+  }
+  .cardsContainer {
+    height: 23rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $Mobile-BreakPoint) {
+      height: unset;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
+
+.overviewDark {
+  .title {
+    color: $White-BG;
+  }
+}
+
+.overviewLight {
+  .title {
+    color: $Dark-Grayish-Blue-Text;
+  }
+}

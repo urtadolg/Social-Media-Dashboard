@@ -13,8 +13,9 @@ const Switch = () => {
       : `${styles.wrapperSwitch} ${styles.wrapperSwitchDark}`;
 
   const handleThemeToggle = () => {
-    console.log("mudando tema....");
-    themeCtx.changeTheme(themeCtx.theme === "Light" ? "Dark" : "Light");
+    const newTheme = themeCtx.theme === "Light" ? "Dark" : "Light";
+    themeCtx.changeTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
