@@ -1,3 +1,16 @@
+# Social Media Dashboard
+
+Screenshots:
+
+![screenshot 1](https://user-images.githubusercontent.com/89041463/144725197-1f7902bc-f2f5-4287-9910-0ec3b5af83a4.png)
+
+![screenshot 2](https://user-images.githubusercontent.com/89041463/144725198-d1d1a036-4513-43f0-8e93-98531a0dc19b.png)
+
+![screenshot 3](https://user-images.githubusercontent.com/89041463/144725199-74a844ce-4012-429f-9b62-8e09bb451043.png)
+
+![screenshot 4](https://user-images.githubusercontent.com/89041463/144725200-a2bfbc8f-ec11-40e4-8a76-21b1f6b3dc43.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
